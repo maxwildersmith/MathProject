@@ -9,12 +9,11 @@ import java.util.Scanner;
  */
 public class Main {
 
-
     public static void main(String[] args){
         Letter[] letters;
 
         try {
-            Scanner in = new Scanner(new File("C:\\Users\\Max\\Desktop\\freq.txt"));
+            Scanner in = new Scanner(new File(Thread.currentThread().getContextClassLoader().getResource("freq.txt").getFile()));
             String s = "";
             while(in.hasNext())
                 s+=in.next();
